@@ -1,0 +1,81 @@
+{
+  "v2_exp1_energy_score_vs_vae_vla": {
+    "v1_vae_kl_single_pass": {
+      "collision_rate_pct": 4.6,
+      "left_mode_pct": 51.0,
+      "right_mode_pct": 45.2,
+      "endpoint_l1": 0.0193
+    },
+    "v2_energy_score_single_pass": {
+      "collision_rate_pct": 2.0,
+      "left_mode_pct": 49.2,
+      "right_mode_pct": 49.4,
+      "endpoint_l1": 0.0493
+    }
+  },
+  "v2_exp2_latent_jepa_mental_simulation": {
+    "blind_reactive_safe_rate_pct": 40.25,
+    "v2_latent_mental_sim_mpc_safe_rate_pct": 99.25,
+    "single_step_8futures_mpc_ms": 8.75,
+    "effective_mental_sim_hz": 114.3
+  },
+  "v2_exp3_zero_shot_depth_extrapolation": {
+    "hop_2_in_dist_acc_pct": 100.0,
+    "hop_4_in_dist_acc_pct": 100.0,
+    "hop_6_ZERO_SHOT_extrap_acc_pct": 99.61,
+    "hop_8_ZERO_SHOT_extrap_acc_pct": 96.48,
+    "hop_10_ZERO_SHOT_extrap_acc_pct": 87.4,
+    "capped_K4_on_hop8_acc_pct": 31.64
+  },
+  "v2_exp4_online_aci_distribution_shift": {
+    "target_coverage_pct": 90.0,
+    "static_conformal_pre_shift_cov_pct": 88.5,
+    "static_conformal_POST_SHIFT_cov_pct": 51.0,
+    "v2_online_ACI_pre_shift_cov_pct": 90.0,
+    "v2_online_ACI_POST_SHIFT_cov_pct": 90.0,
+    "aci_pre_shift_s2_esc_pct": 10.0,
+    "aci_post_shift_s2_esc_pct": 65.5
+  },
+  "v2_exp5_fast_weight_skill_consolidation": {
+    "avg_consolidation_write_microseconds": 801.5,
+    "episodes": [
+      {
+        "episode": 1,
+        "s2_escalation_rate_pct": 11.7,
+        "s1_autonomous_share_pct": 88.3,
+        "s1_autonomous_acc_pct": 100.0
+      },
+      {
+        "episode": 2,
+        "s2_escalation_rate_pct": 1.7,
+        "s1_autonomous_share_pct": 98.3,
+        "s1_autonomous_acc_pct": 100.0
+      },
+      {
+        "episode": 3,
+        "s2_escalation_rate_pct": 0.0,
+        "s1_autonomous_share_pct": 100.0,
+        "s1_autonomous_acc_pct": 100.0
+      },
+      {
+        "episode": 4,
+        "s2_escalation_rate_pct": 0.0,
+        "s1_autonomous_share_pct": 100.0,
+        "s1_autonomous_acc_pct": 100.0
+      },
+      {
+        "episode": 5,
+        "s2_escalation_rate_pct": 0.0,
+        "s1_autonomous_share_pct": 100.0,
+        "s1_autonomous_acc_pct": 100.0
+      }
+    ]
+  },
+  "v2_exp6_orthogonal_subspace_protection": {
+    "shared_bottleneck_acc_pct": 89.0,
+    "shared_bottleneck_ece": 0.052,
+    "v2_orthogonal_subspace_acc_pct": 89.5,
+    "v2_orthogonal_subspace_ece": 0.0452,
+    "final_subspace_orthogonality_loss": 0.00042
+  }
+}

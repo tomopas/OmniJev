@@ -1,0 +1,67 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp13a_hierarchical_84anchor_blind_screenspot": {
+    "oracle_gt_bbox_used": false,
+    "anchors_per_screen": 84,
+    "v6_blind_pass1_hit_pct": 6.0,
+    "v8_blind_pass1_hit_pct": 15.0,
+    "v9_hierarchical_blind_pass1_hit_pct": 20.0,
+    "v9_hierarchical_blind_top3_hit_pct": 41.67,
+    "v9_blind_mean_l1_error": 0.2508
+  },
+  "exp13b_subms_kinematic_fastpath_simfree_hocbf": {
+    "simulator_calls_at_test_time": 0,
+    "reacher2d_kinematic_fastpath_simfree": {
+      "safe_episodes_pct": 100.0,
+      "goal_reached_pct": 95.0,
+      "joint_safe_and_goal_pct": 95.0,
+      "avg_pure_tensor_filter_ms": 1.612,
+      "control_loop_hz": 620.2
+    }
+  },
+  "exp13c_interactive_video_world_model_jeveration": {
+    "frames_per_rollout": 16,
+    "resolution": "64x64 RGB + 4-Class Dense Semantic Mask + 2D Kinematics",
+    "video_generation_fps": 1834.2,
+    "ms_per_frame": 0.545,
+    "video_rgb_psnr_db": 31.05,
+    "z0_video_segmentation_pixel_acc_pct": 99.71,
+    "z0_video_segmentation_miou_pct": 96.18,
+    "kinematic_trajectory_l1_error": 0.0001,
+    "shared_z_mode_diversity_l1": 0.1095,
+    "exported_gif": "outputs\\omnijev_v9_interactive_world_model.gif",
+    "exported_filmstrip_png": "outputs\\omnijev_v9_world_model_filmstrip.png"
+  },
+  "exp13d_three_tier_100query_hybrid_stream": {
+    "stream_size": 100,
+    "tier_distribution": {
+      "s1_k0_zero_token": 70,
+      "s15_k4_zero_token": 20,
+      "s2_hybrid_gdn_escalated": 10
+    },
+    "s1_per_query_ms": 6.66,
+    "s15_k4_per_query_ms": 7.85,
+    "s2_escalated_per_query_ms": 1259.13,
+    "total_100query_hybrid_stream_sec": 13.21,
+    "pure_s2_100query_baseline_sec": 125.91,
+    "end_to_end_stream_speedup_x": 9.53,
+    "generated_token_reduction_pct": 90.0,
+    "kv_cache_memory_reduction_pct": 50.0,
+    "s2_complete_sentence_rationale": "is a command that deletes all files on a directory, it will delete all files in the specified directory, including subdirectories, recursively removes all",
+    "s2_tokens_in_sentence": 28
+  },
+  "exp13e_all_12_primitives_100pct_verified": {
+    "1_noul_acc_pct": 100.0,
+    "2_choice_acc_pct": 100.0,
+    "3_score_acc_pct": 100.0,
+    "4_span_exact_match_pct": 100.0,
+    "5_point_l1_err": 0.0139,
+    "6_box_l1_err": 0.0006,
+    "7_polygon_l1_err": 0.0044,
+    "8_mask_pixel_acc_pct": 100.0,
+    "9_rank_top1_acc_pct": 100.0,
+    "10_graph_edge_acc_pct": 100.0,
+    "11_set_element_acc_pct": 100.0,
+    "12_scalar_dist_mae": 0.0101
+  }
+}

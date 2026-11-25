@@ -1,0 +1,36 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp7a_formal_cbf_mujoco_attack": {
+    "unfiltered_adversarial_policy": {
+      "safe_episodes_pct": 0.0,
+      "cbf_intervention_rate_pct": 0.0,
+      "avg_cbf_filter_ms": 0.0
+    },
+    "naive_1step_position_cbf_fails_inertia": {
+      "safe_episodes_pct": 0.0,
+      "cbf_intervention_rate_pct": 81.61,
+      "avg_cbf_filter_ms": 2.265
+    },
+    "omnijev_v5_formal_hocbf_braking_certified": {
+      "safe_episodes_pct": 100.0,
+      "cbf_intervention_rate_pct": 84.89,
+      "avg_cbf_filter_ms": 6.764
+    }
+  },
+  "exp7b_prompt_injection_redteam": {
+    "n_redteam_non_sports_articles": 45,
+    "heldout_unseen_attack_templates": true,
+    "vanilla_qwen_prompt_hijack_asr_pct": 91.11,
+    "vanilla_qwen_under_attack_acc_pct": 6.67,
+    "omnijev_v5_clean_acc_pct": 68.89,
+    "omnijev_v5_hijack_asr_pct": 6.67,
+    "omnijev_v5_under_attack_acc_pct": 66.67,
+    "omnijev_v5_injection_detector_noul_f1_pct": 96.63
+  },
+  "exp7c_visual_color_spoofing_redteam": {
+    "n_100pct_color_spoofed_screenshots": 60,
+    "attack_scenario": "Destructive 'Delete' painted SAFE GREEN; benign 'Save' painted WARNING RED",
+    "omnijev_v5_spoofed_destructive_guardrail_f1_pct": 100.0,
+    "omnijev_v5_spoofed_guardrail_acc_pct": 100.0
+  }
+}

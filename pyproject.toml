@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnijev"
+version = "10.0.0"
+description = "OmniJev: Unified System 1 / 1.5 Decision, Embodied Control, & Cross-Modal Generation Architecture"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = [
+    "system-1",
+    "decision-models",
+    "jeveration",
+    "vla",
+    "computer-use-agents",
+    "hocbf",
+    "gated-deltanet",
+    "conformal-prediction",
+    "pytorch",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.2.0",
+    "transformers>=4.45.0",
+    "peft>=0.12.0",
+    "safetensors>=0.4.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.25.0",
+    "pydantic>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "Pillow>=10.0.0",
+    "soundfile>=0.12.0",
+]
+
+[project.scripts]
+omnijev = "omnijev.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "httpx>=0.25.0"]
+benchmarks = ["datasets>=2.18.0", "bitsandbytes>=0.43.0", "gymnasium>=1.0.0", "mujoco>=3.1.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

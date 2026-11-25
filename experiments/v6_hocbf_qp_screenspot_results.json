@@ -1,0 +1,55 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp9a_analytical_hocbf_qp_2dof_and_7dof": {
+    "reacher2d_braking_affine_rmse_mm": 13.795,
+    "reacher2d_adversarial_unfiltered": {
+      "safe_episodes_pct": 0.0,
+      "intervention_rate_pct": 0.0,
+      "avg_filter_ms": 0.0
+    },
+    "reacher2d_adversarial_v6_affine_hocbf_qp": {
+      "safe_episodes_pct": 100.0,
+      "intervention_rate_pct": 59.67,
+      "avg_filter_ms": 1.504
+    },
+    "reacher2d_joint_goal_plus_glitch_unfiltered": {
+      "safe_episodes_pct": 81.67,
+      "goal_reached_pct": 93.33,
+      "joint_safe_and_goal_pct": 78.33,
+      "avg_filter_ms": 0.0
+    },
+    "reacher2d_joint_goal_plus_glitch_v6_hocbf_qp": {
+      "safe_episodes_pct": 100.0,
+      "goal_reached_pct": 96.67,
+      "joint_safe_and_goal_pct": 96.67,
+      "avg_filter_ms": 0.533
+    },
+    "pusher7dof_braking_affine_rmse_mm": 8.021,
+    "pusher7dof_adversarial_unfiltered": {
+      "safe_episodes_pct": 0.0,
+      "intervention_rate_pct": 0.0,
+      "avg_filter_ms": 0.0
+    },
+    "pusher7dof_adversarial_v6_affine_hocbf_qp": {
+      "safe_episodes_pct": 100.0,
+      "intervention_rate_pct": 23.67,
+      "avg_filter_ms": 0.937
+    }
+  },
+  "exp9b_real_screenspot_gui_grounding": {
+    "dataset": "rootsautomation/ScreenSpot (real Windows/macOS/Web/Mobile screenshots)",
+    "backbone": "HuggingFaceTB/SmolVLM-256M-Instruct (single-tile causally-conditioned + SigLIP 27x27 + 5x5 local-peak decoding)",
+    "n_train_real_screenshots": 380,
+    "n_eval_real_screenshots": 100,
+    "random_baseline_bbox_hit_pct": 2.0,
+    "pass1_fullscreen_bbox_hit_pct": 4.0,
+    "pass2_cdg_zoom_bbox_hit_pct": 6.0,
+    "top3_candidate_proposal_hit_pct": 33.0,
+    "pass2_within_14pct_radius_pct": 17.0,
+    "pass1_mean_l1_error": 0.2577,
+    "pass2_cdg_zoom_mean_l1_error": 0.255,
+    "random_baseline_l1_error": 0.333,
+    "full_30layer_vlm_ms_per_screen": 114.67,
+    "fast_gpu_siglip_actions_per_sec": 41.1
+  }
+}

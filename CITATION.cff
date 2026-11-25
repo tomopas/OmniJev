@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use OmniJev in your research or engineering, please cite this project as below."
+title: "OmniJev: Unified System 1 / 1.5 Decision, Embodied Control, and Single-Pass Cross-Modal Generation Architecture"
+version: 10.0.0
+date-released: 2026-11-25
+license: MIT
+authors:
+  - name: "OmniJev Contributors"
+keywords:
+  - system-1
+  - jeveration
+  - vla
+  - computer-use-agents
+  - gated-deltanet
+  - hocbf
+  - conformal-prediction
+  - pytorch

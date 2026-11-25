@@ -1,0 +1,32 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp3a_real_smolvlm_cua": {
+    "vlm_backbone": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "screenshot_resolution": "384x384 (Real text-labeled buttons: identical-color Save vs Export, Delete, Search)",
+    "test_screenshots": 80,
+    "click_hit_inside_button_pct": 100.0,
+    "mean_pixel_error_on_384px": 3.96,
+    "action_choice_acc_pct": 100.0,
+    "destructive_guardrail_f1_pct": 100.0,
+    "end_to_end_vlm_plus_cua_ms": 278.44,
+    "effective_real_vlm_actions_per_sec": 3.6
+  },
+  "exp3b_real_hotpotqa_system15": {
+    "n_train_real_multihop": 576,
+    "n_test_real_multihop": 144,
+    "K=0_real_hotpot_acc_pct": 54.17,
+    "K=0_batch_ms": 0.25,
+    "K=2_real_hotpot_acc_pct": 56.25,
+    "K=2_batch_ms": 10.09,
+    "K=4_real_hotpot_acc_pct": 59.03,
+    "K=4_batch_ms": 13.3
+  },
+  "exp3c_real_joint_4task_orthogonal_cotraining": {
+    "shared_cotrain_agnews_acc_pct": 77.5,
+    "shared_cotrain_agnews_ece": 0.1558,
+    "shared_cotrain_hotpot_acc_pct": 58.33,
+    "orthogonal_cotrain_agnews_acc_pct": 77.92,
+    "orthogonal_cotrain_agnews_ece": 0.1838,
+    "orthogonal_cotrain_hotpot_acc_pct": 68.75
+  }
+}

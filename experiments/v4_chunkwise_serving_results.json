@@ -1,0 +1,64 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp1a_chunkwise_wy_deltanet": [
+    {
+      "seq_len": 64,
+      "serial_ms": 42.18,
+      "chunkwise_wy_ms": 7.21,
+      "speedup_x": 5.85,
+      "max_numerical_diff": 4.77e-07
+    },
+    {
+      "seq_len": 128,
+      "serial_ms": 55.11,
+      "chunkwise_wy_ms": 7.92,
+      "speedup_x": 6.96,
+      "max_numerical_diff": 4.77e-07
+    },
+    {
+      "seq_len": 256,
+      "serial_ms": 107.84,
+      "chunkwise_wy_ms": 14.78,
+      "speedup_x": 7.29,
+      "max_numerical_diff": 4.77e-07
+    },
+    {
+      "seq_len": 512,
+      "serial_ms": 212.64,
+      "chunkwise_wy_ms": 28.46,
+      "speedup_x": 7.47,
+      "max_numerical_diff": 4.77e-07
+    }
+  ],
+  "exp1b_real_nf4_mixed_precision": {
+    "bf16_baseline": {
+      "mode": "bf16",
+      "gpu_vram_mb": 1005.0,
+      "single_query_ms": 39.36,
+      "agnews_4way_acc_pct": 81.25,
+      "agnews_4way_ece": 0.0471
+    },
+    "real_nf4_backbone_fp32_heads": {
+      "mode": "nf4_mixed_precision",
+      "gpu_vram_mb": 474.9,
+      "single_query_ms": 71.48,
+      "agnews_4way_acc_pct": 80.0,
+      "agnews_4way_ece": 0.1094
+    },
+    "vram_reduction_pct": 52.7
+  },
+  "exp1c_fastapi_production_server": {
+    "health_status": "ok",
+    "decide_latency_ms": 341.82,
+    "decide_tokens_generated": 0,
+    "decide_primitives_returned": [
+      "city",
+      "is_security_related",
+      "severity",
+      "topic"
+    ],
+    "consolidate_ok": true,
+    "consolidate_write_ms": 59.47,
+    "skills_stored_after_write": 1
+  }
+}

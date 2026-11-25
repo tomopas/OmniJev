@@ -1,0 +1,59 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp2a_agnews_v4_cosine_multilayer_upgrade": {
+    "orig_World_Sports_before_pct": 92.08,
+    "orig_ece_before": 0.06,
+    "phase1_fastweight_novel_acc_pct": 50.42,
+    "phase1_fastweight_orig_acc_pct": 80.83,
+    "phase2_sleep_ms": 2969.3,
+    "phase2_fast_weights_remaining": 0,
+    "phase2_orig_retention_pct": 89.58,
+    "phase2_novel_permanent_acc_pct": 73.33,
+    "phase2_all4_agnews_acc_pct": 81.46,
+    "phase2_all4_calibrated_ece": 0.1583,
+    "calibrated_temp": 0.185
+  },
+  "exp2b_banking77_4wave_self_healing": {
+    "dataset": "PolyAI/banking77 (4 Continual Waves: 5 -> 10 -> 15 -> 20 Real Enterprise Intents)",
+    "total_sleep_cycles": 12,
+    "waves": [
+      {
+        "wave": 0,
+        "total_intents": 5,
+        "heldout_all_seen_acc_pct": 92.67,
+        "heldout_ece": 0.0167,
+        "shock_esc_first25_pct": 0.0,
+        "healed_esc_last50_pct": 0.0,
+        "closed_loop_online_acc_pct": 92.67
+      },
+      {
+        "wave": 1,
+        "total_intents": 10,
+        "heldout_all_seen_acc_pct": 89.0,
+        "heldout_ece": 0.0687,
+        "shock_esc_first25_pct": 100.0,
+        "healed_esc_post_wave_pct": 96.0,
+        "closed_loop_online_acc_pct": 97.46
+      },
+      {
+        "wave": 2,
+        "total_intents": 15,
+        "heldout_all_seen_acc_pct": 84.89,
+        "heldout_ece": 0.0673,
+        "shock_esc_first25_pct": 88.0,
+        "healed_esc_post_wave_pct": 94.0,
+        "closed_loop_online_acc_pct": 97.46
+      },
+      {
+        "wave": 3,
+        "total_intents": 20,
+        "heldout_all_seen_acc_pct": 83.0,
+        "heldout_ece": 0.0694,
+        "shock_esc_first25_pct": 100.0,
+        "healed_esc_post_wave_pct": 58.0,
+        "closed_loop_online_acc_pct": 96.71
+      }
+    ]
+  }
+}

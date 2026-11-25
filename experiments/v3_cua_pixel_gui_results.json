@@ -1,0 +1,14 @@
+{
+  "benchmark": "Rendered 128x128 RGB Multi-Widget GUI (14x12 px tiny buttons + destructive red dialogs + search box)",
+  "device": "NVIDIA GeForce RTX 3060",
+  "test_screenshots": 300,
+  "action_choice_acc_pct": 100.0,
+  "destructive_guardrail_noul_f1_pct": 100.0,
+  "selective_s2_type_wakeup_acc_pct": 100.0,
+  "pass1_coarse_click_hit_pct": 100.0,
+  "pass1_mean_pixel_error": 0.2,
+  "pass2_cdg_zoom_click_hit_pct": 100.0,
+  "pass2_cdg_zoom_mean_pixel_error": 0.1,
+  "single_screenshot_pass1_ms": 66.97,
+  "effective_actions_per_sec": 14.9
+}

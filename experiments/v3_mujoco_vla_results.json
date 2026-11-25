@@ -1,0 +1,31 @@
+{
+  "environment": "MuJoCo 3.17 Reacher-v5 (Real Continuous Physics + Physical Obstacle + Dynamic Hazard)",
+  "device": "NVIDIA GeForce RTX 3060",
+  "l2_oft_parallel_baseline": {
+    "closed_loop_safe_and_reached_success_pct": 0.0,
+    "safe_obstacle_and_hazard_free_pct": 53.75,
+    "goal_reached_pct": 0.0,
+    "mean_final_tip_dist_m": 0.3249,
+    "mean_torque_jerk": 0.0089,
+    "chunk_infer_ms": 0.41,
+    "effective_control_hz": 2441.6
+  },
+  "omnijev_v3_flow_energy_rtc": {
+    "closed_loop_safe_and_reached_success_pct": 35.0,
+    "safe_obstacle_and_hazard_free_pct": 43.75,
+    "goal_reached_pct": 75.0,
+    "mean_final_tip_dist_m": 0.0794,
+    "mean_torque_jerk": 0.088,
+    "chunk_infer_ms": 5.76,
+    "effective_control_hz": 173.6
+  },
+  "omnijev_v3_latent_jepa_cvar_mpc": {
+    "closed_loop_safe_and_reached_success_pct": 83.75,
+    "safe_obstacle_and_hazard_free_pct": 96.25,
+    "goal_reached_pct": 83.75,
+    "mean_final_tip_dist_m": 0.0737,
+    "mean_torque_jerk": 0.0871,
+    "chunk_infer_ms": 9.05,
+    "effective_control_hz": 110.5
+  }
+}

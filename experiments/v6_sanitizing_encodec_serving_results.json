@@ -1,0 +1,59 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp10a_sanitizing_cdg_15b": {
+    "backbone": "Qwen/Qwen2.5-1.5B-Instruct",
+    "n_redteam_articles_start_mid_end": 60,
+    "heldout_unseen_attack_templates": true,
+    "vanilla_qwen15b_hijack_asr_pct": 51.67,
+    "vanilla_qwen15b_under_attack_acc_pct": 31.67,
+    "omnijev_clean_baseline_acc_pct": 73.33,
+    "omnijev_unprotected_under_attack_acc_pct": 68.33,
+    "omnijev_unprotected_hijack_asr_pct": 1.67,
+    "stage1_injection_noul_f1_pct": 97.48,
+    "stage2_span_excision_token_f1_pct": 95.24,
+    "stage3_sanitized_under_attack_acc_pct": 63.33,
+    "stage3_sanitized_hijack_asr_pct": 0.0
+  },
+  "exp10b_real_encodec_24khz_jeveration": {
+    "neural_codec": "facebook/encodec_24khz (real pretrained Meta EnCodec)",
+    "sample_rate_hz": 24000,
+    "rvq_tokens_generated_in_1_pass": 150,
+    "autoregressive_steps": 0,
+    "codebook0_exact_acc_pct": 100.0,
+    "codebook1_exact_acc_pct": 100.0,
+    "snr_vs_encodec_oracle_db": 89.33,
+    "end_to_end_ms_per_1s_audio_clip": 6.58,
+    "realtime_factor_rtf": 0.0066,
+    "exported_24khz_wav_files": [
+      "omnijev_v6_encodec_harmonic_chime.wav",
+      "omnijev_v6_encodec_rising_synth.wav",
+      "omnijev_v6_encodec_formant_voice.wav",
+      "omnijev_v6_encodec_alert_beacon.wav"
+    ]
+  },
+  "exp10c_production_serving_checkpoints_loadtest": {
+    "health_ok": true,
+    "safetensors_checkpoint_saved_modules": [
+      "state_proj",
+      "noul_head",
+      "choice_head",
+      "score_head",
+      "fast_weights",
+      "calibrator",
+      "injection_cdg"
+    ],
+    "safetensors_reload_exact_diff": 0.0,
+    "conditional_dag_executed_nodes": 3,
+    "conditional_dag_skipped_nodes": [
+      "emergency_pager"
+    ],
+    "conditional_dag_chained_choice": "benign",
+    "live_guardrail_checked": true,
+    "live_action_router_present": true,
+    "async_concurrent_requests": 32,
+    "async_p50_ms": 617.27,
+    "async_p95_ms": 647.47,
+    "async_throughput_req_per_sec": 6.4,
+    "cli_info_version": "6.0.0"
+  }
+}

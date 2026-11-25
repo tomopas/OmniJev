@@ -1,0 +1,38 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp5a_playable_rvq_audio_jeveration": {
+    "sample_rate_hz": 16000,
+    "rvq_levels": 4,
+    "codebook_size": 64,
+    "codec_oracle_spec_snr_db": 40.07,
+    "single_pass_generated_spec_snr_db": 18.95,
+    "shared_z_token_diversity_pct": 11.72,
+    "single_pass_gpu_latency_ms": 13.17,
+    "real_time_factor_rtf": 0.0514,
+    "exported_playable_wavs": [
+      "outputs\\omnijev_v4_chime_chord.wav",
+      "outputs\\omnijev_v4_rising_chirp.wav",
+      "outputs\\omnijev_v4_vocal_formant.wav",
+      "outputs\\omnijev_v4_alert_pulse.wav"
+    ]
+  },
+  "exp5b_executable_python_ast_jeveration": {
+    "n_generated_python_functions": 100,
+    "unmasked_parallel_ast_parse_valid_pct": 0.0,
+    "unmasked_parallel_exec_pass_pct": 0.0,
+    "omnijev_v4_grammar_masked_ast_parse_valid_pct": 100.0,
+    "omnijev_v4_grammar_masked_exec_pass_pct": 100.0,
+    "batch100_t2_refinement_ms": 42.66,
+    "ms_per_function": 0.427,
+    "sample_generated_functions": [
+      {
+        "source": "def blend(x, y):\n    tmp = (x * 2) - (y + 1)\n    return (tmp + x) if (tmp > 2) else (tmp + x)",
+        "exec_result_at_7_3": 17
+      },
+      {
+        "source": "def blend(x, y):\n    tmp = (x * 2) + (y + 1)\n    return (tmp + x) if (tmp >= 4) else (tmp + x)",
+        "exec_result_at_7_3": 25
+      }
+    ]
+  }
+}

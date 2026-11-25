@@ -1,0 +1,202 @@
+{
+  "exp1_permutation_invariance": {
+    "trials": 400,
+    "choice_max_prob_shift": 2.2351741790771484e-08,
+    "rank_max_utility_shift": 2.384185791015625e-07,
+    "choice_flip_rate_pct": 0.0
+  },
+  "exp2_vla_bimodal_obstacle_and_rtc": {
+    "l2_mean_baseline": {
+      "collision_rate_pct": 100.0,
+      "left_mode_pct": 0.0,
+      "right_mode_pct": 0.0,
+      "endpoint_l1": 0.0028
+    },
+    "l1_oft_baseline": {
+      "collision_rate_pct": 100.0,
+      "left_mode_pct": 0.0,
+      "right_mode_pct": 0.0,
+      "endpoint_l1": 0.0144
+    },
+    "jev_vla_single_pass": {
+      "collision_rate_pct": 5.0,
+      "left_mode_pct": 47.5,
+      "right_mode_pct": 47.5,
+      "endpoint_l1": 0.02
+    },
+    "jev_vla_best_of_8": {
+      "collision_rate_pct": 0.0,
+      "left_mode_pct": 100.0,
+      "right_mode_pct": 0.0,
+      "endpoint_l1": 0.011
+    },
+    "vla_batch400_ms": 7.15,
+    "rtc_boundary_jerk_reduction_pct": 96.7
+  },
+  "exp3_system15_multihop_deliberation": {
+    "K=0_acc_pct": 47.66,
+    "K=0_batch1024_ms": 1.0,
+    "K=1_acc_pct": 43.85,
+    "K=1_batch1024_ms": 5.03,
+    "K=2_acc_pct": 62.6,
+    "K=2_batch1024_ms": 9.13,
+    "K=3_acc_pct": 99.8,
+    "K=3_batch1024_ms": 13.26,
+    "K=4_acc_pct": 99.8,
+    "K=4_batch1024_ms": 17.75,
+    "adaptive_halt_avg_K": 3.44,
+    "adaptive_halt_acc_pct": 99.8
+  },
+  "exp4_evidential_conformal_and_routing": {
+    "in_domain_s1_acc_pct": 96.33,
+    "in_domain_ece": 0.0472,
+    "conformal_coverage_target90_pct": 90.5,
+    "ooi_detection_recall_pct": 94.0,
+    "id_false_ooi_rate_pct": 1.33,
+    "far_ood_caught_pct": 98.0,
+    "s1_auto_execute_pct": 64.33,
+    "s1_accepted_precision_pct": 100.0,
+    "hybrid_s1_s2_accuracy_pct": 99.29
+  },
+  "exp5_streaming_state_benchmark": {
+    "stream_tokens": 128,
+    "chunk_size": 16,
+    "max_equivalence_error": 1e-06,
+    "first_chunk_ms": 38.92,
+    "last_chunk_ms": 38.09,
+    "state_kb_at_chunk1": 128.0,
+    "state_kb_at_chunk8": 224.0,
+    "memory_capped_o1": true
+  },
+  "exp6_composable_decision_graph_zoom": {
+    "cdg_trace": [
+      "coarse_pass",
+      "zoom_crop_pass"
+    ],
+    "refined_global_point": [
+      0.5469,
+      0.5464
+    ],
+    "crop_box_px": [
+      31,
+      31,
+      39,
+      39
+    ],
+    "end_to_end_2pass_ms": 172.45
+  },
+  "exp7_quantization_and_tier_profiles": {
+    "naive_int4_prob_l1_drift": 0.0007,
+    "mixed_int4_fp16head_prob_l1_drift": 0.00048,
+    "naive_int4_point_l1_drift": 0.00044,
+    "mixed_int4_fp16head_point_l1_drift": 0.00011,
+    "naive_int4_vacuity_drift": 0.00263,
+    "mixed_int4_fp16head_vacuity_drift": 0.00164,
+    "tier_profiles": [
+      {
+        "tier": "nano",
+        "hardware": "Jetson Orin Nano / Edge NPU",
+        "params_b": 1.5,
+        "backbone_bits": 4,
+        "head_bits": 16,
+        "weight_gb": 0.784,
+        "streaming_state_mb": 59.77,
+        "fits_vram": true,
+        "gflops": 384.0,
+        "latency_ms": 23.83,
+        "max_hz": 42.0
+      },
+      {
+        "tier": "edge",
+        "hardware": "Jetson Orin AGX 64GB",
+        "params_b": 4.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 4.06,
+        "streaming_state_mb": 149.42,
+        "fits_vram": true,
+        "gflops": 2048.0,
+        "latency_ms": 35.42,
+        "max_hz": 28.2
+      },
+      {
+        "tier": "edge",
+        "hardware": "NVIDIA RTX 4090 (FP8)",
+        "params_b": 4.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 4.06,
+        "streaming_state_mb": 149.42,
+        "fits_vram": true,
+        "gflops": 2633.1,
+        "latency_ms": 11.57,
+        "max_hz": 86.5
+      },
+      {
+        "tier": "base",
+        "hardware": "NVIDIA H200 (FP8)",
+        "params_b": 12.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 12.18,
+        "streaming_state_mb": 550.5,
+        "fits_vram": true,
+        "gflops": 12288.0,
+        "latency_ms": 15.0,
+        "max_hz": 66.7
+      },
+      {
+        "tier": "base",
+        "hardware": "NVIDIA H200 (FP8)",
+        "params_b": 12.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 12.18,
+        "streaming_state_mb": 550.5,
+        "fits_vram": true,
+        "gflops": 20048.8,
+        "latency_ms": 24.91,
+        "max_hz": 40.1
+      },
+      {
+        "tier": "pro",
+        "hardware": "NVIDIA H200 (FP8)",
+        "params_b": 32.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 32.48,
+        "streaming_state_mb": 1101.0,
+        "fits_vram": true,
+        "gflops": 32768.0,
+        "latency_ms": 38.0,
+        "max_hz": 26.3
+      },
+      {
+        "tier": "pro",
+        "hardware": "NVIDIA H200 (FP8)",
+        "params_b": 32.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 32.48,
+        "streaming_state_mb": 1101.0,
+        "fits_vram": true,
+        "gflops": 51492.6,
+        "latency_ms": 60.22,
+        "max_hz": 16.6
+      },
+      {
+        "tier": "world",
+        "hardware": "NVIDIA H200 (FP8)",
+        "params_b": 12.0,
+        "backbone_bits": 8,
+        "head_bits": 16,
+        "weight_gb": 12.18,
+        "streaming_state_mb": 481.69,
+        "fits_vram": true,
+        "gflops": 16588.8,
+        "latency_ms": 19.83,
+        "max_hz": 50.4
+      }
+    ]
+  }
+}

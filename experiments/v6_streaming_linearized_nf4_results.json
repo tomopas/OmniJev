@@ -1,0 +1,76 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp8a_streaming_linearized_qwen_logit_kl": {
+    "total_layers": 24,
+    "replaced_with_chunkwise_gdn": 12,
+    "kv_cache_memory_reduction_pct": 50.0,
+    "measured_dynamic_cache_kv_bytes_teacher": 3145728,
+    "measured_dynamic_cache_kv_bytes_hybrid": 1572864,
+    "measured_actual_kv_savings_pct": 50.0,
+    "distill_final_mse": 7.5636,
+    "distill_final_cosine_sim": 0.9505,
+    "distill_final_logit_kl": 0.6548,
+    "distill_time_s": 139.9,
+    "streaming_chunk_equivalence": {
+      "seq_len": 256,
+      "chunk_size": 64,
+      "max_abs_diff": 2.5,
+      "mean_cosine_sim": 0.999921
+    },
+    "long_context_memory_scaling": {
+      "L_512": {
+        "teacher_kv_mb": 6.291,
+        "hybrid_kv_mb": 3.146,
+        "hybrid_gdn_o1_state_mb": 2.882,
+        "kv_memory_saved_pct": 50.0
+      },
+      "L_2048": {
+        "teacher_kv_mb": 25.166,
+        "hybrid_kv_mb": 12.583,
+        "hybrid_gdn_o1_state_mb": 2.882,
+        "kv_memory_saved_pct": 50.0
+      },
+      "L_4096": {
+        "teacher_kv_mb": 50.332,
+        "hybrid_kv_mb": 25.166,
+        "hybrid_gdn_o1_state_mb": 2.882,
+        "kv_memory_saved_pct": 50.0
+      }
+    },
+    "wikitext2_perplexity": {
+      "teacher_full_attn_ppl": 18.92,
+      "hybrid_50pct_gdn_logit_kl_ppl": 25.08
+    },
+    "ag_news": {
+      "teacher": {
+        "acc_pct": 82.08,
+        "ece": 0.0485
+      },
+      "hybrid_50pct_gdn": {
+        "acc_pct": 82.08,
+        "ece": 0.0583
+      }
+    },
+    "sst2": {
+      "teacher": {
+        "acc_pct": 79.17,
+        "ece": 0.0631
+      },
+      "hybrid_50pct_gdn": {
+        "acc_pct": 77.92,
+        "ece": 0.0391
+      }
+    }
+  },
+  "exp8b_cross_validated_nf4_calibration": {
+    "n_cal_samples": 360,
+    "n_eval_samples": 600,
+    "nf4_raw_acc_pct": 78.83,
+    "nf4_raw_ece": 0.1857,
+    "nf4_cv_calibrated_acc_pct": 78.83,
+    "nf4_cv_calibrated_ece": 0.0263,
+    "ece_reduction_pct": 85.8,
+    "learned_cv_temp": 4.425,
+    "fit_ms": 472.72
+  }
+}

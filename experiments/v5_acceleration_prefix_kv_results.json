@@ -1,0 +1,41 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp5a_nf4_post_quant_calibration": {
+    "nf4_raw_acc_pct": 75.83,
+    "nf4_raw_ece": 0.2245,
+    "nf4_post_quant_calibrated_acc_pct": 75.83,
+    "nf4_post_quant_calibrated_ece": 0.0725,
+    "ece_reduction_pct": 67.7,
+    "learned_temp": 8.607
+  },
+  "exp5b_fast_gpu_smolvlm_cua": {
+    "v4_pil_cpu_smolvlm_ms": 349.12,
+    "v4_actions_per_sec": 2.9,
+    "v5_gpu_native_fast_smolvlm_ms": 47.89,
+    "v5_actions_per_sec": 20.9,
+    "speedup_x": 7.29,
+    "max_point_diff_px_on_384": 0.083
+  },
+  "exp5c_action_risk_conformal_banking77": {
+    "banking77_20class_acc_pct": 90.0,
+    "banking77_20class_ece": 0.0645,
+    "v4_strict_setsize1_escalation_pct": 8.25,
+    "v5_action_risk_router_escalation_pct": 5.75,
+    "escalation_cut_pct": 30.3,
+    "v5_s1_auto_executed_queue_precision_pct": 95.23,
+    "v5_hybrid_end_to_end_queue_acc_pct": 95.5
+  },
+  "exp5d_prefix_kv_cdg_speedup": {
+    "prefix_tokens": 1287,
+    "cdg_nodes": 6,
+    "uncached_6node_ms": 832.41,
+    "cached_prefix_kv_first_graph_ms": 231.08,
+    "cached_prefix_kv_warm_graph_ms": 88.09,
+    "first_graph_speedup_x": 3.6,
+    "warm_graph_speedup_x": 9.45,
+    "fastapi_decide_graph_cold_ms": 439.19,
+    "fastapi_decide_graph_warm_ms": 282.32,
+    "fastapi_decide_graph_warm_hits": 6,
+    "fastapi_decide_graph_tokens_gen": 0
+  }
+}

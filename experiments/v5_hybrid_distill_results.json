@@ -1,0 +1,59 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp6a_real_hybrid_gdn_linearization": {
+    "total_layers": 24,
+    "replaced_with_chunkwise_gdn": 12,
+    "kv_cache_memory_reduction_pct": 50.0,
+    "measured_dynamic_cache_kv_bytes_teacher": 3145728,
+    "measured_dynamic_cache_kv_bytes_hybrid": 1572864,
+    "measured_actual_kv_savings_pct": 50.0,
+    "distill_final_mse": 5.7147,
+    "distill_final_cosine_sim": 0.9598,
+    "distill_time_s": 118.4,
+    "teacher_full_attn_agnews": {
+      "acc_pct": 77.5,
+      "ece": 0.1386
+    },
+    "hybrid_50pct_gdn_agnews": {
+      "acc_pct": 75.0,
+      "ece": 0.1311
+    },
+    "teacher_full_attn_sst2": {
+      "acc_pct": 76.25,
+      "ece": 0.0511
+    },
+    "hybrid_50pct_gdn_sst2": {
+      "acc_pct": 74.58,
+      "ece": 0.0766
+    }
+  },
+  "exp6b_hotpotqa_15b_self_distilled": {
+    "backbone": "Qwen/Qwen2.5-1.5B-Instruct",
+    "v4_frozen_05b_baseline_acc_pct": 59.03,
+    "qwen15b_zero_shot_readout_acc_pct": 77.08,
+    "system15_scratchpad_distilled_k4_acc_pct": 81.25,
+    "system15_scratchpad_distilled_k4_ece": 0.0557,
+    "peft_lora_1prefill_hotpot_acc_pct": 80.56,
+    "peft_lora_1prefill_hotpot_ece": 0.0609,
+    "tokens_generated": 0
+  },
+  "exp6c_4domain_real_suite_qwen15b": {
+    "ag_news_4way": {
+      "acc_pct": 80.83,
+      "ece": 0.0607
+    },
+    "sst2_sentiment_noul": {
+      "acc_pct": 90.83,
+      "ece": 0.0597
+    },
+    "banking77_20intent": {
+      "acc_pct": 83.25,
+      "ece": 0.0497
+    },
+    "hotpotqa_multihop_lora": {
+      "acc_pct": 80.56,
+      "ece": 0.0609
+    },
+    "macro_avg_acc_pct": 83.87
+  }
+}

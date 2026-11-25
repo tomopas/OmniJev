@@ -1,0 +1,42 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp4a_reacher_tree_vs_diffusion": {
+    "ddim_15step_diffusion_policy": {
+      "closed_loop_success_pct": 3.75,
+      "safe_obstacle_and_hazard_free_pct": 65.0,
+      "goal_reached_pct": 7.5,
+      "mean_final_tip_dist_m": 0.2352,
+      "mean_torque_jerk": 0.1911,
+      "chunk_infer_ms": 14.21,
+      "effective_control_hz": 70.4
+    },
+    "omnijev_v4_1pass_flow_energy_rtc": {
+      "closed_loop_success_pct": 42.5,
+      "safe_obstacle_and_hazard_free_pct": 46.25,
+      "goal_reached_pct": 90.0,
+      "mean_final_tip_dist_m": 0.0638,
+      "mean_torque_jerk": 0.0854,
+      "chunk_infer_ms": 6.48,
+      "effective_control_hz": 154.3
+    },
+    "omnijev_v4_2step_recursive_tree_cvar_mpc": {
+      "closed_loop_success_pct": 93.75,
+      "safe_obstacle_and_hazard_free_pct": 100.0,
+      "goal_reached_pct": 93.75,
+      "mean_final_tip_dist_m": 0.0553,
+      "mean_torque_jerk": 0.0882,
+      "chunk_infer_ms": 18.72,
+      "effective_control_hz": 53.4
+    }
+  },
+  "exp4b_pusher_7dof_vla_vs_diffusion": {
+    "env": "MuJoCo 3.17 Pusher-v5 (7-DoF Manipulation, 23D obs, 7D torque)",
+    "ddim_15step_ms": 11.6,
+    "ddim_15step_hz": 86.2,
+    "ddim_7dof_action_l1": 0.3527,
+    "omnijev_v4_1pass_ms": 6.18,
+    "omnijev_v4_1pass_hz": 161.7,
+    "omnijev_v4_7dof_action_l1": 0.0269,
+    "vla_speedup_over_ddim_x": 1.88
+  }
+}

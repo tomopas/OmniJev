@@ -1,0 +1,53 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp14a_two_stage_blind_foveal_screenspot": {
+    "oracle_gt_bbox_used": false,
+    "stage1_anchors_per_screen": 84,
+    "stage2_native_foveal_subanchors_per_screen": 27,
+    "v6_blind_pass1_hit_pct": 6.0,
+    "v8_blind_pass1_hit_pct": 15.0,
+    "v9_blind_pass1_hit_pct": 20.0,
+    "v10_stage1_blind_pass1_hit_pct": 25.0,
+    "v10_stage2_native_foveal_pass1_hit_pct": 31.67,
+    "v10_stage2_native_foveal_top3_hit_pct": 55.0,
+    "v10_blind_mean_l1_error": 0.2126
+  },
+  "exp14b_subms_tangential_simfree_hocbf": {
+    "simulator_calls_at_test_time": 0,
+    "safe_episodes_pct": 100.0,
+    "goal_reached_pct": 98.33,
+    "joint_safe_and_goal_pct": 98.33,
+    "avg_pure_tensor_filter_ms": 0.947,
+    "control_loop_hz": 1055.8
+  },
+  "exp14c_batched_hybrid_gdn_100query_stream": {
+    "stream_size": 100,
+    "s1_per_query_ms": 6.55,
+    "s15_k4_per_query_ms": 7.35,
+    "s2_batched_10_total_ms": 1243.17,
+    "s2_batched_per_query_ms": 124.32,
+    "v9_sequential_s2_100query_stream_sec": 13.21,
+    "v10_batched_s2_100query_stream_sec": 1.85,
+    "pure_s2_100query_baseline_sec": 125.91,
+    "v10_end_to_end_stream_speedup_x": 68.12,
+    "generated_token_reduction_pct": 90.0,
+    "kv_cache_memory_reduction_pct": 50.0,
+    "all_10_s2_sentences_period_terminated": true,
+    "sample_generated_sentences": [
+      "deletes all files and directories, which can lead to data loss.",
+      "can lead to data loss.",
+      "is a security risk, it can be used to access sensitive data."
+    ]
+  },
+  "exp14d_unified_axes_a_to_e_embodied_agent": {
+    "end_to_end_neural_decision_wiring": true,
+    "total_closed_loop_episodes": 40,
+    "prompt_injection_attack_episodes": 20,
+    "neural_sanitizer_detection_rate_pct": 100.0,
+    "prompt_injection_hijack_asr_pct": 0.0,
+    "world_model_foresight_optimal_plan_acc_pct": 100.0,
+    "physical_safe_episodes_pct": 100.0,
+    "goal_reached_pct": 95.0,
+    "joint_safe_and_goal_pct": 95.0
+  }
+}

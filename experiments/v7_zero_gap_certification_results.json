@@ -1,0 +1,72 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp11a_native_crop_screenspot_cua": {
+    "dataset": "rootsautomation/ScreenSpot (real Windows/macOS/Web/Mobile screenshots)",
+    "method": "Native-Resolution UI Widget Box Proposal (M=8) + Permutation-Equivariant Set-Attention Reranker",
+    "n_train_screenshots": 240,
+    "n_eval_screenshots": 80,
+    "v6_single_tile_384_pass2_bbox_hit_pct": 6.0,
+    "v7_native_crop_pass1_bbox_hit_pct": 70.0,
+    "v7_native_crop_top3_bbox_hit_pct": 87.5,
+    "v7_mean_l1_center_error": 0.0972,
+    "random_choice_baseline_hit_pct": 12.5
+  },
+  "exp11b_latent_mask_sanitizing_cdg_15b": {
+    "backbone": "Qwen/Qwen2.5-1.5B-Instruct",
+    "method": "Zero-Refill Latent Token-Mask Excision (0 second LLM prefills, 0 BPE boundary shifts)",
+    "clean_baseline_acc_pct": 70.0,
+    "v6_retokenized_sanitized_acc_pct": 63.33,
+    "v7_latent_masked_sanitized_acc_pct": 68.33,
+    "clean_accuracy_retention_pct": 97.6,
+    "v7_post_sanitization_hijack_asr_pct": 0.0,
+    "latent_sanitization_overhead_ms_per_doc": 0.67
+  },
+  "exp11c_simulator_free_pure_tensor_hocbf_qp": {
+    "simulator_calls_at_test_time": 0,
+    "reacher2d_conformal_margin_m": 0.0087,
+    "reacher2d_adversarial_simfree": {
+      "safe_episodes_pct": 100.0,
+      "goal_reached_pct": 0.0,
+      "joint_safe_and_goal_pct": 0.0,
+      "avg_pure_tensor_filter_ms": 2.861,
+      "control_loop_hz": 349.5
+    },
+    "reacher2d_joint_goal_glitch_simfree": {
+      "safe_episodes_pct": 100.0,
+      "goal_reached_pct": 95.0,
+      "joint_safe_and_goal_pct": 95.0,
+      "avg_pure_tensor_filter_ms": 2.817,
+      "control_loop_hz": 354.9
+    },
+    "pusher7dof_conformal_margin_m": 0.0195,
+    "pusher7dof_adversarial_simfree": {
+      "safe_episodes_pct": 100.0,
+      "avg_pure_tensor_filter_ms": 0.705,
+      "control_loop_hz": 1417.9
+    }
+  },
+  "exp11d_async_dynamic_batched_serving": {
+    "n_concurrent_requests": 32,
+    "v6_unbatched_p50_ms": 617.27,
+    "v6_unbatched_throughput_req_per_sec": 6.4,
+    "v7_dynamic_batched_per_item_p50_ms": 3.04,
+    "v7_dynamic_batched_per_item_p95_ms": 3.04,
+    "v7_dynamic_batched_wall_time_s": 0.273,
+    "v7_dynamic_batched_throughput_req_per_sec": 117.3,
+    "avg_coalesced_batch_size": 16.0,
+    "throughput_speedup_x": 18.32
+  },
+  "exp11e_visual_rgb_dense_mask_3d_ply_jeveration": {
+    "single_pass_infer_ms": 1.776,
+    "rgb_psnr_db": 25.02,
+    "shared_z_mode_diversity_l1": 0.0555,
+    "z0_dense_segmentation_pixel_acc_pct": 97.31,
+    "z0_dense_segmentation_miou_pct": 81.6,
+    "pointcloud_3d_rmse": 0.02219,
+    "exported_artifacts": [
+      "omnijev_v7_rgb_multimode_grid.png",
+      "omnijev_v7_z0_dense_segmentation_mask.png",
+      "omnijev_v7_3d_pointcloud.ply"
+    ]
+  }
+}

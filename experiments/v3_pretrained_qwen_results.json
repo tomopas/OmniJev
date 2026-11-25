@@ -1,0 +1,64 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "NVIDIA GeForce RTX 3060",
+  "exp1a_latency_speedup": {
+    "qwen25_ar_json_ms_per_query": 611.35,
+    "qwen25_ar_json_parse_error_pct": 9.38,
+    "omnijev_v3_single_ms_per_query": 43.32,
+    "omnijev_v3_batched32_ms_per_query": 8.69,
+    "single_query_speedup_x": 14.1,
+    "batched_speedup_x": 70.3,
+    "omnijev_schema_error_pct": 0.0
+  },
+  "exp1b_order_bias_elimination": {
+    "n_real_articles": 24,
+    "vanilla_qwen_prompt_flip_rate_pct": 58.33,
+    "vanilla_qwen_max_prob_shift": 0.882,
+    "vanilla_qwen_mean_prob_shift": 0.4802,
+    "omnijev_v3_flip_rate_pct": 0.0,
+    "omnijev_v3_max_prob_shift": 4.47e-08
+  },
+  "exp1cd_agnews_two_timescale_consolidation": {
+    "orig_World_Sports_acc_before_pct": 91.5,
+    "orig_World_Sports_ece_before": 0.0311,
+    "unseen_Biz_SciTech_acc_before_pct": 0.0,
+    "phase1_fastweight_s2_esc_first40_pct": 15.0,
+    "phase1_fastweight_s2_esc_next160_pct": 0.62,
+    "phase1_fastweight_write_us": 884.0,
+    "phase1_fastweight_novel_test_acc_pct": 61.5,
+    "phase1_fastweight_orig_test_acc_pct": 71.5,
+    "phase2_sleep_duration_ms": 1895.6,
+    "phase2_fast_weights_evicted_remaining": 0,
+    "phase2_after_sleep_orig_retention_pct": 77.0,
+    "phase2_after_sleep_forgetting_delta_pct": 14.5,
+    "phase2_after_sleep_novel_permanent_acc_pct": 77.0,
+    "phase2_after_sleep_all4_agnews_acc_pct": 77.0,
+    "phase2_after_sleep_all4_ece": 0.1213
+  },
+  "exp1e_extractive_span_qa": {
+    "real_qwen25_extractive_span_em_pct": 100.0,
+    "hallucination_rate_pct": 0.0,
+    "sample_extractions": [
+      {
+        "question": "Which city did the company open the laboratory in?",
+        "gold": "Zurich",
+        "extracted": "Zurich"
+      },
+      {
+        "question": "What budget allocation was reported?",
+        "gold": "$120M",
+        "extracted": "$120M"
+      },
+      {
+        "question": "Which city did the company open the laboratory in?",
+        "gold": "Dublin",
+        "extracted": "Dublin"
+      },
+      {
+        "question": "What budget allocation was reported?",
+        "gold": "$9.5M",
+        "extracted": "$9.5M"
+      }
+    ]
+  }
+}

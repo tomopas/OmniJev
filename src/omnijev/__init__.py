@@ -1,0 +1,216 @@
+"""OmniJev: Unified System 1 / 1.5 Decision, Embodied Control, & Cross-Modal Generation Model Family."""
+
+from .config import OmniJevConfig, get_tier_config, MODEL_TIERS
+from .encoders import UniversalMultimodalBus, ModalityBatch
+from .backbone import (
+    GatedDeltaNetLayer,
+    SlidingWindowAttentionLayer,
+    StreamingHybridBackbone,
+    StreamingState,
+    System15LatentDeliberationCore,
+)
+from .primitives import (
+    QueryCrossPooler,
+    NoulHead,
+    OrderInvariantChoiceHead,
+    OrdinalScoreHead,
+    BiaffineSpanHead,
+    PointHead,
+    BoxHead,
+    PolygonHead,
+    MaskHead,
+    OrderInvariantRankHead,
+    BiaffineGraphHead,
+    CorrelatedSetHead,
+    ScalarDistributionHead,
+    AxisAPrimitiveSuite,
+)
+from .jeveration import (
+    UniversalJeverationHead,
+    PosteriorModeEncoder,
+    CrossModalJeverationSuite,
+)
+from .embodied import (
+    JevVLAHead,
+    RealTimeActionChunkBlender,
+    JevCUAHead,
+    ToolGuardrailHead,
+    HierarchicalDualRateController,
+)
+from .system15 import (
+    EvidentialDirichletLoss,
+    PrototypeMahalanobisOOD,
+    SplitConformalCalibrator,
+    CostAwareEscalationRouter,
+    ComposableDecisionGraph,
+    CDGNode,
+    FramingInvarianceRLCDLoss,
+)
+from .model import OmniJevModel
+from .edge import (
+    HardwareProfile,
+    HARDWARE_PROFILES,
+    profile_model_tier,
+    simulate_mixed_precision_quantization,
+)
+from .v2_frontier import (
+    EnergyScoreDistributionLoss,
+    LatentJEPAWorldHead,
+    LatentMentalSimController,
+    OnlineAdaptiveConformal,
+    ScratchpadEquilibriumCore,
+    FastWeightSkillConsolidator,
+    OrthogonalSubspaceAdapterBank,
+)
+from .v3_consolidation import (
+    FlowEnergyHybridLoss,
+    LoRALinear,
+    MicroLoRASleepConsolidator,
+    RiskSensitiveLatentPlanner,
+)
+from .pretrained_bridge import PretrainedOmniJevBridge
+from .v4_production import (
+    MultiLayerAttentionTap,
+    CosineAlignedSleepConsolidator,
+    SelfHealingAdaptiveController,
+    PretrainedVLMOmniJevBridge,
+    RecursiveLatentTreePlanner,
+    load_mixed_precision_nf4_llm,
+)
+from .v4_codecs import (
+    SpectralRVQAudioCodec,
+    PythonASTSlotGenerator,
+)
+from .server import create_omnijev_app
+from .v5_hardening import (
+    PostQuantCalibrator,
+    FastGPUVLMBridge,
+    ActionRiskConformalRouter,
+    ChunkwiseGDNSelfAttnMixer,
+    HybridGDNBlockWrapper,
+    HybridLinearizationDistiller,
+    ControlBarrierSafetyFilter,
+    PrefixKVCacheManager,
+)
+from .v6_frontier import (
+    DifferentiableHOCBFQPFilter,
+    TwoStageSanitizingDefenseCDG,
+    NeuralEncodecJeverator,
+    CrossValidatedNF4Calibrator,
+    OmniJevCheckpointManager,
+)
+from .v7_certification import (
+    SimulatorFreeRobustHOCBFQP,
+    LatentMaskSanitizingCDG,
+    AsyncDynamicBatcher,
+    Visual3DJeverationSuite,
+)
+from .v8_reviewer_proof import (
+    NonOracleDOMWebUISimulator,
+    BlindPyramidScreenSpotProposer,
+    UnifiedS1ToS2HybridCascade,
+)
+from .v9_ultimate import (
+    HierarchicalBlindScreenSpotGrounder,
+    ActionConditionedVideoWorldJeverator,
+    ThreeTierHybridStreamController,
+)
+from .v10_masterpiece import (
+    TwoStageBlindFovealScreenSpotGrounder,
+    BatchedHybridGDNSentenceGenerator,
+    UnifiedEmbodiedOmniJevAgent,
+)
+
+__all__ = [
+    "OmniJevConfig",
+    "get_tier_config",
+    "MODEL_TIERS",
+    "UniversalMultimodalBus",
+    "ModalityBatch",
+    "GatedDeltaNetLayer",
+    "SlidingWindowAttentionLayer",
+    "StreamingHybridBackbone",
+    "StreamingState",
+    "System15LatentDeliberationCore",
+    "QueryCrossPooler",
+    "NoulHead",
+    "OrderInvariantChoiceHead",
+    "OrdinalScoreHead",
+    "BiaffineSpanHead",
+    "PointHead",
+    "BoxHead",
+    "PolygonHead",
+    "MaskHead",
+    "OrderInvariantRankHead",
+    "BiaffineGraphHead",
+    "CorrelatedSetHead",
+    "ScalarDistributionHead",
+    "AxisAPrimitiveSuite",
+    "UniversalJeverationHead",
+    "PosteriorModeEncoder",
+    "CrossModalJeverationSuite",
+    "JevVLAHead",
+    "RealTimeActionChunkBlender",
+    "JevCUAHead",
+    "ToolGuardrailHead",
+    "HierarchicalDualRateController",
+    "EvidentialDirichletLoss",
+    "PrototypeMahalanobisOOD",
+    "SplitConformalCalibrator",
+    "CostAwareEscalationRouter",
+    "ComposableDecisionGraph",
+    "CDGNode",
+    "FramingInvarianceRLCDLoss",
+    "OmniJevModel",
+    "HardwareProfile",
+    "HARDWARE_PROFILES",
+    "profile_model_tier",
+    "simulate_mixed_precision_quantization",
+    "EnergyScoreDistributionLoss",
+    "LatentJEPAWorldHead",
+    "LatentMentalSimController",
+    "OnlineAdaptiveConformal",
+    "ScratchpadEquilibriumCore",
+    "FastWeightSkillConsolidator",
+    "OrthogonalSubspaceAdapterBank",
+    "FlowEnergyHybridLoss",
+    "LoRALinear",
+    "MicroLoRASleepConsolidator",
+    "RiskSensitiveLatentPlanner",
+    "PretrainedOmniJevBridge",
+    "MultiLayerAttentionTap",
+    "CosineAlignedSleepConsolidator",
+    "SelfHealingAdaptiveController",
+    "PretrainedVLMOmniJevBridge",
+    "RecursiveLatentTreePlanner",
+    "load_mixed_precision_nf4_llm",
+    "SpectralRVQAudioCodec",
+    "PythonASTSlotGenerator",
+    "create_omnijev_app",
+    "PostQuantCalibrator",
+    "FastGPUVLMBridge",
+    "ActionRiskConformalRouter",
+    "ChunkwiseGDNSelfAttnMixer",
+    "HybridGDNBlockWrapper",
+    "HybridLinearizationDistiller",
+    "ControlBarrierSafetyFilter",
+    "PrefixKVCacheManager",
+    "DifferentiableHOCBFQPFilter",
+    "TwoStageSanitizingDefenseCDG",
+    "NeuralEncodecJeverator",
+    "CrossValidatedNF4Calibrator",
+    "OmniJevCheckpointManager",
+    "SimulatorFreeRobustHOCBFQP",
+    "LatentMaskSanitizingCDG",
+    "AsyncDynamicBatcher",
+    "Visual3DJeverationSuite",
+    "NonOracleDOMWebUISimulator",
+    "BlindPyramidScreenSpotProposer",
+    "UnifiedS1ToS2HybridCascade",
+    "HierarchicalBlindScreenSpotGrounder",
+    "ActionConditionedVideoWorldJeverator",
+    "ThreeTierHybridStreamController",
+    "TwoStageBlindFovealScreenSpotGrounder",
+    "BatchedHybridGDNSentenceGenerator",
+    "UnifiedEmbodiedOmniJevAgent",
+]
